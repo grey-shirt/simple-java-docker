@@ -35,3 +35,10 @@ application {
     // Define the main class for the application.
     mainClass = 'simple.java.docker.App'
 }
+
+// https://stackoverflow.com/questions/21721119/creating-runnable-jar-with-gradle
+jar {
+    manifest {
+        attributes 'Main-Class': application.mainClass
+    }
+}
